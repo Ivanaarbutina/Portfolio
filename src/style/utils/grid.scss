@@ -1,0 +1,35 @@
+.grid {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $media-sm) {
+    display: grid;
+  }
+
+  &--primary {
+    grid-template-columns: repeat(1, 1fr);
+
+    @media (min-width: $media-sm) {
+      row-gap: 5rem;
+      margin-bottom: 5rem;
+      margin-bottom: 2.75rem;
+    }
+
+    @media (min-width: $media-lg) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+    }
+  }
+
+  &--skills {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.375rem;
+    margin-top: 1.75rem;
+
+    @media (min-width: $media-sm) {
+      gap: 3rem;
+      margin-top: 3rem;
+      transform: translateX(2.5rem);
+    }
+  }
+}

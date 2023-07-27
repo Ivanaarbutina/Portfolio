@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  background-color: var(--color-white-400);
+  margin: 0;
+}
+
+:root {
+  //border
+  --border-rounded: 0.5rem;
+
+  //colors
+  --color-gray-300: #afafae;
+  --color-gray-400: #4f5051;
+  --color-gray-500: #0e0d0d;
+  --color-gray-450: #566573;
+  --color-gray-460: #575e5b;
+  --color-green: #44d29b;
+  --color-green-150: rgb(127, 159, 150);
+  --color-white-300: #f4f4f4;
+  --color-white-400: #f8f8f8;
+  --color-animated-1: #cbdadb;
+  --color-animated-2: #62e4c4;
+  --color-animated-3: #0d4671;
+  --color-card-1: #a1afae;
+  --color-card-2: #7cb4b0;
+  --color-card-3: #93bbb8;
+  --color-card-4: #285678;
+  --color-box-1: #424e4c;
+  --color-carmine-1: #731054;
+  --color-carmine-2: #e411a1;
+}
+
+//breakpoints
+$media-sm: 37.5em; //600px
+$media-md: 48em; //768px
+$media-lg: 62em; //992px
+$media-xl: 75em; //1200px
+
+@import "./features/about.scss";
+@import "./animated.scss";
+@import "./components/button.scss";
+@import "./features/contact/contact.scss";
+@import "./components/container.scss";
+@import "./features/work/europe.scss";
+@import "./utils/grid.scss";
+@import "./features/home/skills.scss";
+@import "./features/home/home.scss";
+@import "./components/footer.scss";
+@import "./components/input.scss";
+@import "./features/home/projects.scss";
+@import "./components/text-slider.scss";
+@import "./features/work/to-do-list.scss";
+@import "./features/work/work.scss";
+@import "./features/work/search-app.scss";

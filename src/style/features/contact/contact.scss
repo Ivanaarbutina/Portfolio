@@ -1,0 +1,92 @@
+.contact {
+  display: flex;
+  padding: 0.2rem;
+  align-items: center;
+  justify-content: space-between;
+  @media (min-width: $media-lg) {
+    padding: 1.5rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    text-align: center;
+    @media (min-width: $media-sm) {
+      margin: 0 2rem;
+    }
+    @media (min-width: $media-lg) {
+      padding: 2rem;
+      margin: 0 8rem;
+    }
+  }
+
+  &__title {
+    font-size: 1.7rem;
+    color: var(--color-animated-3);
+    font-family: "Caveat", cursive;
+    @media (min-width: $media-sm) {
+      font-size: 2rem;
+    }
+  }
+  &__desc {
+    font-size: 1.1rem;
+    color: var(--color-animated-3);
+    font-family: "Caveat", cursive;
+    @media (min-width: $media-sm) {
+      font-size: 1.7rem;
+    }
+  }
+
+  &__location,
+  &__mail {
+    & a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "Caveat", cursive;
+      font-size: 1rem;
+      color: var(--color-carmine-1);
+      text-decoration: none;
+      transition: all 250ms ease;
+
+      @media (min-width: $media-sm) {
+        font-size: 1.5rem;
+      }
+      &:hover {
+        color: var(--color-carmine-2);
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__location {
+    & a {
+      font-size: 1rem;
+      @media (min-width: $media-sm) {
+        font-size: 1.5rem;
+      }
+    }
+    & img {
+      width: 4rem;
+      @media (min-width: $media-lg) {
+        width: 8.5rem;
+      }
+    }
+  }
+
+  &__mail {
+    & a {
+      font-size: 1.1rem;
+      @media (min-width: $media-sm) {
+        font-size: 1.7rem;
+      }
+    }
+    & img {
+      width: 3.3rem;
+      @media (min-width: $media-lg) {
+        width: 7rem;
+      }
+    }
+  }
+}

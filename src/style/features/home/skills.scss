@@ -1,0 +1,29 @@
+.skills {
+  margin: 2rem auto;
+  display: flex;
+
+  justify-content: center;
+
+  @media (min-width: $media-sm) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon {
+    padding: 0.3rem;
+    box-shadow: 7px 7px 15px #8c8a8a;
+    width: 2rem;
+    border-radius: 0.5rem;
+    margin: 0.2rem;
+    @media (min-width: $media-sm) {
+      padding: 0.7rem;
+      margin: 1rem;
+      width: 3.8rem;
+    }
+
+    &:hover {
+      box-shadow: 8px 8px 25px #646363;
+    }
+  }
+}
