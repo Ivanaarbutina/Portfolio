@@ -13,7 +13,7 @@ type WorkType = {
 
 export const works: WorkType[] = [
   {
-    path: "search-app",
+    path: "/search-app",
     descript:
       "This application is a music search app developed using React, TypeScript, and external APIs. It provides users with a seamless interface to search for their favorite songs and preview audio clips. The app leverages the iTunes API to fetch search results based on user input.",
     gitHub:
@@ -30,7 +30,7 @@ export const works: WorkType[] = [
     name: "Chat Application",
   },
   {
-    path: "to-do-list",
+    path: "/to-do-list",
     descript:
       "This application is a simple To-Do List app developed using React. It allows users to create, manage, and track their tasks or to-do items. The app provides a clean and user-friendly interface for adding new tasks, marking tasks as completed, and deleting tasks as they are completed.",
     gitHub:
@@ -39,7 +39,7 @@ export const works: WorkType[] = [
     name: "To do list",
   },
   {
-    path: "europe",
+    path: "/europe",
     descript:
       "The Europe uses the Fetch API to retrieve data from the RestCountries API, which provides detailed information about countries worldwide. The application leverages React's state and effect hooks to manage the data and provide real-time updates to the user interface.",
     gitHub:
