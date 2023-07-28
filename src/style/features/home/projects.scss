@@ -1,11 +1,11 @@
 .home__projects {
   margin-top: 3rem;
-  padding: 1rem;
   display: flex;
   flex-direction: column;
   text-align: center;
   width: 100%;
   @media (min-width: $media-sm) {
+    padding: 1rem;
     text-align: start;
     justify-content: space-between;
     flex-direction: row;
@@ -16,13 +16,13 @@
     background-color: var(--color-card-4);
     border-radius: var(--border-rounded);
     box-shadow: 1rem 1rem 1rem #6d7571;
-    margin-bottom: 7rem;
+    margin-bottom: 4rem;
     padding: 1rem;
   }
 
   &__title {
     font-family: "Lato", sans-serif;
-    color: rgb(34, 205, 196);
+    color: #22cdc4;
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 800;
@@ -57,7 +57,7 @@
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     grid-gap: 1rem;
     margin: 0.5rem;
-    padding: 1rem;
+    padding: 1rem auto;
     @media (min-width: $media-sm) {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -73,7 +73,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  margin: 0 auto;
   width: 100%;
+  max-width: 17rem;
   box-shadow: 1rem 1rem 1rem #0a1f44;
   transition: all 250ms ease-in-out;
   border-radius: var(--border-rounded);

@@ -6,12 +6,11 @@
     #0d4671 95%
   );
   min-height: 6rem;
-  padding-top: 3rem;
   color: rgb(99, 105, 124);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   padding: 1rem;
   @media (min-width: $media-sm) {
     font-size: 1rem;
@@ -29,7 +28,11 @@
 
   &__links {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    @media (min-width: $media-sm) {
+      align-items: center;
+      flex-direction: row;
+    }
   }
 
   &__link {
@@ -38,7 +41,7 @@
     margin-right: 0.3rem;
     color: var(--color-animated-3);
     text-decoration: none;
-    font-size: 0.2rem;
+    font-size: 0.7rem;
     font-weight: 700;
     transition: all 250ms ease-in-out;
     text-transform: uppercase;

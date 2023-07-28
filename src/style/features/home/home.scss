@@ -9,6 +9,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    padding: 0.5rem;
     @media (min-width: $media-sm) {
       padding: 2rem;
       flex-direction: row;
@@ -51,7 +52,7 @@
   }
 
   &__description {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: var(--color-animated-3);
     font-family: "Caveat", cursive;
 

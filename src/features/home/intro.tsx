@@ -14,9 +14,9 @@ const Intro = () => {
           <p className="home__description">
             Hi, I'm{" "}
             <span className="home__description__name">Ivana Arbutina</span>. A
-            passionate Front-end <br></br> Developer based in Beli Manastir,
-            Croatia. Recently, I completed my education as a Frontend developer
-            and I have a deep desire to excel and improve in my work.
+            passionate Front-end Developer based in Beli Manastir, Croatia.
+            Recently, I completed my education as a Frontend developer and I
+            have a deep desire to excel and improve in my work.
           </p>
           <p className="home__description">
             During my education, I discovered my true passion for web

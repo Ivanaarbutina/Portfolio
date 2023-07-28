@@ -1,16 +1,19 @@
 .work {
   display: flex;
   flex-direction: column;
-  background-color: rgb(161, 175, 174);
+  background-color: var(--color-card-1);
   border-radius: var(--border-rounded);
   color: var(--color-white-400);
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 1rem;
+  padding: 1rem;
   overflow: hidden;
-  box-shadow: 1rem 1rem 1rem #6d7571;
+  box-shadow: 1rem 1rem 1rem var(--color-box-1);
   transition: all 250ms ease-in-out;
   max-width: 32rem;
   min-height: 39rem;
+  @media (min-width: $media-md) {
+    padding: 1.5rem;
+  }
 
   &:hover {
     background-color: rgb(124, 180, 176);
@@ -24,7 +27,7 @@
     ); /* Kartice će imati minimalno 20rem, a maksimalno će se raširiti na raspoloživi prostor */
     grid-gap: 2rem; /* Dodajemo razmak između kartica */
     margin-top: 1rem;
-
+    justify-items: center;
     @media (min-width: $media-md) {
       grid-template-columns: repeat(1, 1fr);
     }
@@ -49,9 +52,12 @@
 
   &__desc {
     margin-top: 10px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
     color: var(--color-carmine-1);
+    @media (min-width: $media-sm) {
+      font-size: 1.2rem;
+    }
   }
 
   &__name {
@@ -67,12 +73,12 @@
 
   &__project {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     min-height: calc(100vh - 4rem);
     margin-bottom: 2rem;
     margin: 2rem auto;
-    padding: 0 2rem;
+    padding: 2rem;
 
     &__img {
       width: 6rem;
