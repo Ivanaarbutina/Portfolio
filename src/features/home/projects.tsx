@@ -15,12 +15,12 @@ type ProjectType = {
 const projects: ProjectType[] = [
   {
     name: "Music search App",
-    link: "search-app",
+    link: "/search-app",
     img: searchApp,
   },
   {
     name: "To do App",
-    link: "to-do-list",
+    link: "/to-do-list",
     img: todo,
   },
   {
@@ -30,7 +30,7 @@ const projects: ProjectType[] = [
   },
   {
     name: "Europe",
-    link: "europe",
+    link: "/europe",
     img: europe,
   },
 ];
