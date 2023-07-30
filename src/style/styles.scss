@@ -19,6 +19,7 @@ body {
   --color-gray-450: #566573;
   --color-gray-460: #575e5b;
   --color-green: #44d29b;
+  --color-green-hover: #22cdc4;
   --color-green-150: rgb(127, 159, 150);
   --color-white-300: #f4f4f4;
   --color-white-400: #f8f8f8;
@@ -32,9 +33,24 @@ body {
   --color-box-1: #424e4c;
   --color-carmine-1: #731054;
   --color-carmine-2: #e411a1;
+
+  //box-shadows
+  --custom-box-shadow: 1px 2px 2px hsla(219, 9%, 30%, 0.2),
+    2px 4px 4px hsla(219, 9%, 30%, 0.2), 4px 8px 8px hsla(219, 9%, 30%, 0.2),
+    8px 16px 16px hsla(219, 9%, 30%, 0.2),
+    16px 32px 32px hsla(219, 9%, 30%, 0.2);
+  --hover-box-shadow: 1px 2px 2px hsla(225, 5%, 16%, 0.2),
+    2px 4px 4px hsla(225, 5%, 16%, 0.2), 4px 8px 8px hsla(225, 5%, 16%, 0.2),
+    8px 16px 16px hsla(225, 5%, 16%, 0.2),
+    16px 32px 32px hsla(225, 5%, 16%, 0.2);
+  --blue-box-shadow: 1px 2px 2px hsla(220, 61%, 23%, 0.2),
+    2px 4px 4px hsla(220, 61%, 23%, 0.2), 4px 8px 8px hsla(220, 61%, 23%, 0.2),
+    8px 16px 16px hsla(220, 61%, 23%, 0.2),
+    16px 32px 32px hsla(220, 61%, 23%, 0.2);
 }
 
 //breakpoints
+$media-xs: 36em; //576px
 $media-sm: 37.5em; //600px
 $media-md: 48em; //768px
 $media-lg: 62em; //992px

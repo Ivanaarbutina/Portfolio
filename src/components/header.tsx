@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Waves from "./waves";
 import Code from "./../assets/code_5568944.png";
 
@@ -28,11 +28,11 @@ const Header = () => {
   return (
     <div>
       <div className="header">
-        <div className="inner-header flex">
-          <div className="header__box">
+        <div className="inner-header ">
+          <Link to={"/"} className="header__box">
             <img className="header__logo" src={Code} alt="Header logo" />
             <span className="header__name">Ivana</span>
-          </div>
+          </Link>
           <nav className="nav">
             {headerLinks.map((link: LinkType) => {
               return (

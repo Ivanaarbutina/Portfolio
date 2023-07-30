@@ -10,6 +10,7 @@
     flex-direction: column;
     align-items: center;
     padding: 0.5rem;
+
     @media (min-width: $media-sm) {
       padding: 2rem;
       flex-direction: row;
@@ -25,7 +26,10 @@
       margin-top: 1rem;
       width: 14rem;
       border-radius: var(--border-rounded);
-      box-shadow: 1rem 1rem 1.5rem var(--color-box-1);
+      box-shadow: 1px 2px 2px hsla(219, 9%, 30%, 0.2),
+        2px 4px 4px hsla(219, 9%, 30%, 0.2), 4px 8px 8px hsla(219, 9%, 30%, 0.2),
+        8px 16px 16px hsla(219, 9%, 30%, 0.2),
+        16px 32px 32px hsla(219, 9%, 30%, 0.2);
       @media (min-width: $media-md) {
         width: 18rem;
       }
@@ -52,29 +56,36 @@
   }
 
   &__description {
-    font-size: 1.2rem;
-    color: var(--color-animated-3);
-    font-family: "Caveat", cursive;
+    &__text {
+      font-size: 1.2rem;
+      color: var(--color-animated-3);
+      font-family: "Caveat", cursive;
+      margin-right: 0.5rem;
 
-    @media (min-width: $media-md) {
-      font-size: 1.35rem;
-      margin-right: 1rem;
-    }
-    @media (min-width: $media-lg) {
-      font-size: 1.8rem;
-      margin-right: 1rem;
+      @media (min-width: $media-xs) {
+        font-size: 1.35rem;
+        margin-right: 1.3rem;
+      }
+      @media (min-width: $media-lg) {
+        font-size: 1.8rem;
+        margin-right: 1rem;
+      }
     }
 
     &__name {
-      font-size: 1.9rem;
+      font-family: "Caveat", cursive;
+      font-size: 2rem;
       font-weight: 700;
       color: var(--color-animated-3);
-      font-family: "Caveat", cursive;
     }
   }
 
   &__icon {
     width: 2rem;
     margin-right: 0.8rem;
+    transition: all 250ms ease;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 }

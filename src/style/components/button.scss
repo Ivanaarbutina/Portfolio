@@ -5,7 +5,7 @@
   font-size: 1rem;
   cursor: pointer;
   transition: all 250ms ease-in-out;
-  box-shadow: 0 0.125rem 0.75rem 0 var(--color-gray-500);
+  box-shadow: var(--custom-box-shadow);
   text-transform: uppercase;
 
   @media (min-width: $media-sm) {
@@ -27,6 +27,7 @@
   &--blue {
     background-color: #2d6087;
     color: #fff;
+    box-shadow: var(--blue-box-shadow);
     &:hover {
       background-color: #073659;
       color: var(--color-animated-2);

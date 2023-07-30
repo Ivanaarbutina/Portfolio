@@ -10,6 +10,7 @@ const Footer = () => {
           <Link
             className="footer__link"
             to="https://icons8.com/illustrations/author/zD2oqC8lLBBA"
+            target="_blank"
           >
             {" "}
             Icons 8{" "}
@@ -20,6 +21,7 @@ const Footer = () => {
           <Link
             className="footer__link"
             to="https://icons8.com/illustrations/author/CkHJmwURlxnt"
+            target="_blank"
           >
             {" "}
             Olha Khomich{" "}
@@ -27,7 +29,11 @@ const Footer = () => {
         </div>
         <div>
           from{" "}
-          <Link className="footer__link" to="https://icons8.com/illustrations">
+          <Link
+            className="footer__link"
+            to="https://icons8.com/illustrations"
+            target="_blank"
+          >
             Ouch!
           </Link>
         </div>

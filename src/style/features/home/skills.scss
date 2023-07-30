@@ -16,7 +16,10 @@
     width: 2rem;
     border-radius: 0.5rem;
     margin: 0.2rem;
-    @media (min-width: $media-sm) {
+    @media (min-width: 595px) {
+      width: 3rem;
+    }
+    @media (min-width: $media-md) {
       padding: 0.7rem;
       margin: 1rem;
       width: 3.8rem;

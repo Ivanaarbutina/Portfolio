@@ -21,7 +21,7 @@ const Contact = () => {
             </Link>
           </div>
           <div className="contact__location">
-            <Link to="https://goo.gl/maps/CoDEeQaqBuapGg2F7">
+            <Link to="https://goo.gl/maps/CoDEeQaqBuapGg2F7" target="_blank">
               <img src={location} alt="Location icon" />
               Beli Manastir, Croatia
             </Link>

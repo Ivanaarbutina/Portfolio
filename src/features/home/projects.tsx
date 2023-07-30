@@ -40,7 +40,7 @@ const Projects = () => {
     <Container size="lg">
       <div className="home__projects__wrapper">
         <header className="home__projects">
-          <Link className="home__projects__title" to="work">
+          <Link className="home__projects__title" target="_blank" to="work">
             My recent projects
           </Link>
           <img className="home__project__img" src={work} alt="Project icon" />
@@ -50,7 +50,11 @@ const Projects = () => {
             return (
               <div key={project.name} className="project__box">
                 <img src={project.img} className="project__box__img" />
-                <Link to={project.link} className="project__box__link">
+                <Link
+                  to={project.link}
+                  target="_blank"
+                  className="project__box__link"
+                >
                   {project.name}
                 </Link>
               </div>

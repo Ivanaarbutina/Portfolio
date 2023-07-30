@@ -19,7 +19,10 @@ $font-size-sm: 1rem;
     width: 90%;
     margin: auto;
     padding: 0.5rem;
-    box-shadow: 1rem 1rem 1rem #6d7571;
+    box-shadow: 1px 2px 2px hsla(219, 9%, 30%, 0.2),
+      2px 4px 4px hsla(219, 9%, 30%, 0.2), 4px 8px 8px hsla(219, 9%, 30%, 0.2),
+      8px 16px 16px hsla(219, 9%, 30%, 0.2),
+      16px 32px 32px hsla(219, 9%, 30%, 0.2);
     justify-content: flex-end;
     background-color: var(--color-card-2);
 

@@ -4,7 +4,8 @@
   flex-direction: column;
   text-align: center;
   width: 100%;
-  @media (min-width: $media-sm) {
+
+  @media (min-width: $media-md) {
     padding: 1rem;
     text-align: start;
     justify-content: space-between;
@@ -15,14 +16,15 @@
   &__wrapper {
     background-color: var(--color-card-4);
     border-radius: var(--border-rounded);
-    box-shadow: 1rem 1rem 1rem #6d7571;
+    box-shadow: var(--blue-box-shadow);
     margin-bottom: 4rem;
     padding: 1rem;
+    margin: 0.5rem;
   }
 
   &__title {
     font-family: "Lato", sans-serif;
-    color: #22cdc4;
+    color: var(--color-white-400);
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 800;
@@ -34,7 +36,7 @@
     }
 
     &:hover {
-      color: rgb(241, 242, 242);
+      color: var(--color-green-hover);
     }
 
     &:hover {
@@ -48,22 +50,17 @@
       display: block;
       width: 0;
       height: 2px;
-      background-color: rgb(80, 238, 196);
+      background-color: var(--color-white-400);
       transition: all 250ms ease-in-out;
     }
   }
   &__main {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 1rem;
-    margin: 0.5rem;
-    padding: 1rem auto;
-    @media (min-width: $media-sm) {
+    margin: 0 auto;
+    @media (min-width: $media-md) {
       grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media (min-width: $media-xl) {
-      grid-template-columns: repeat(4, 1fr);
     }
   }
 }
@@ -76,13 +73,12 @@
   justify-content: center;
   margin: 0 auto;
   width: 100%;
-  max-width: 17rem;
+  max-width: 16rem;
   box-shadow: 1rem 1rem 1rem #0a1f44;
   transition: all 250ms ease-in-out;
   border-radius: var(--border-rounded);
-  @media (min-width: $media-sm) {
+  @media (min-width: $media-xs) {
     padding: 1rem;
-    max-width: 18rem;
     margin: 0 auto;
   }
   &:hover {

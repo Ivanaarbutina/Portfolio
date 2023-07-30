@@ -28,7 +28,7 @@
     border-radius: var(--border-rounded);
     flex: 1;
     margin-bottom: 0.5rem;
-    box-shadow: 0 0.125rem 0.75rem 0 var(--color-gray-400);
+    box-shadow: var(--custom-box-shadow);
 
     @media (min-width: $media-sm) {
       font-size: 1.2rem;
@@ -64,7 +64,7 @@
       max-width: 18rem;
       width: 100%;
       overflow: hidden;
-      box-shadow: 1rem 1rem 1rem #6d7571;
+      box-shadow: var(--custom-box-shadow);
       transition: all 250ms ease-in-out;
 
       @media (min-width: $media-sm) {
@@ -73,7 +73,7 @@
 
       &:hover {
         background-color: rgb(124, 180, 176);
-        box-shadow: 1rem 1rem 0.8rem #565b58;
+        box-shadow: var(--hover-box-shadow);
       }
 
       &__name {
