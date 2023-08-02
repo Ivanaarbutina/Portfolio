@@ -25,7 +25,8 @@
   &__title {
     font-family: "Lato", sans-serif;
     color: var(--color-white-400);
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: var(--color-animated-2);
     font-size: 1.3rem;
     font-weight: 800;
     transition: all 250ms ease-in-out;
@@ -34,33 +35,49 @@
     @media (min-width: $media-sm) {
       font-size: 1.9rem;
     }
+  }
 
+  &__desc {
+    color: var(--color-white-400);
+    font-size: 1.1rem;
+    font-family: "Caveat", cursive;
+    margin: 1rem auto;
+    @media (min-width: $media-xs) {
+      font-size: 1.3rem;
+    }
+    @media (min-width: $media-lg) {
+      font-size: 1.7rem;
+      margin-right: 1rem;
+    }
+  }
+
+  &__work {
+    font-family: "Caveat", cursive;
+    color: var(--color-animated-2);
+    text-decoration: none;
+    transition: all 250ms ease-in-out;
     &:hover {
-      color: var(--color-green-hover);
+      color: var(--color-carmine-2);
     }
+  }
 
-    &:hover {
-      &::after {
-        width: 100%;
-      }
-    }
-
-    &::after {
-      content: "";
-      display: block;
-      width: 0;
-      height: 2px;
-      background-color: var(--color-white-400);
-      transition: all 250ms ease-in-out;
-    }
+  &__img {
+    display: block;
+    width: 18rem;
+    margin: 0 auto;
   }
   &__main {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 1rem;
-    margin: 0 auto;
+    margin: 1rem auto;
+
     @media (min-width: $media-md) {
       grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+      justify-items: center;
+      align-items: center;
+      max-width: 45rem;
     }
   }
 }
@@ -72,18 +89,24 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  margin-bottom: 1rem;
   width: 100%;
   max-width: 16rem;
-  box-shadow: 1rem 1rem 1rem #0a1f44;
+  box-shadow: var(--custom-box-shadow);
   transition: all 250ms ease-in-out;
   border-radius: var(--border-rounded);
   @media (min-width: $media-xs) {
-    padding: 1rem;
+    padding: 0.5rem;
     margin: 0 auto;
+
+    max-width: 19rem;
+  }
+  @media (min-width: $media-lg) {
+    max-width: 21rem;
   }
   &:hover {
     background-color: var(--color-card-2);
-    box-shadow: 1rem 1rem 0.8rem #030827;
+    box-shadow: var(--hover-box-shadow);
   }
 
   &__img {
@@ -91,6 +114,9 @@
     margin-bottom: 0.5rem;
     border: 2px solid var(--color-animated-3);
     border-radius: var(--border-rounded);
+    @media (min-width: $media-sm) {
+      width: 17rem;
+    }
   }
   &__link {
     font-family: "Lato", sans-serif;
@@ -101,7 +127,7 @@
     transition: all 250ms ease-in-out;
     text-transform: uppercase;
     @media (min-width: $media-sm) {
-      font-size: 1.1rem;
+      font-size: 1.3rem;
     }
 
     &:hover {
@@ -122,5 +148,9 @@
       background-color: var(--color-animated-3);
       transition: all 250ms ease-in-out;
     }
+  }
+  &__icon {
+    width: 1.6rem;
+    margin: 0.5rem;
   }
 }
