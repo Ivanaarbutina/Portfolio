@@ -12,6 +12,7 @@ import sass from "./../../assets/sass_919831.png";
 type ProjectType = {
   name: string;
   link: string;
+  desc: string;
   img: string;
   reactIcon: string;
   typeScIcon: string;
@@ -22,6 +23,7 @@ const projects: ProjectType[] = [
   {
     name: "Music search App",
     link: "/search-app",
+    desc: "Find your favorite song and enjoy...",
     img: searchApp,
     reactIcon: react,
     typeScIcon: typeSc,
@@ -30,6 +32,7 @@ const projects: ProjectType[] = [
   {
     name: "To do App",
     link: "/to-do-list",
+    desc: " Create, manage, and track your task...",
     img: todo,
     reactIcon: react,
     typeScIcon: typeSc,
@@ -38,6 +41,7 @@ const projects: ProjectType[] = [
   {
     name: "Chat App",
     link: "https://ivanaarbutina.github.io/algebra-seminarski/",
+    desc: "Join a chat room...",
     img: chatApp,
     reactIcon: react,
     typeScIcon: typeSc,
@@ -46,6 +50,7 @@ const projects: ProjectType[] = [
   {
     name: "Europe",
     link: "/europe",
+    desc: "Information about countries worldwide...",
     img: europe,
     reactIcon: react,
     typeScIcon: typeSc,
@@ -91,13 +96,16 @@ const Projects = () => {
             return (
               <div key={project.name} className="project__box">
                 <img src={project.img} className="project__box__img" />
-                <Link
-                  to={project.link}
-                  target="_blank"
-                  className="project__box__link"
-                >
-                  {project.name}
-                </Link>
+                <div className="project__box__layer">
+                  <Link
+                    to={project.link}
+                    target="_blank"
+                    className="project__box__link"
+                  >
+                    <h2>{project.name}</h2>
+                    <p>{project.desc}</p>
+                  </Link>
+                </div>
                 <div>
                   <img src={project.reactIcon} className="project__box__icon" />
                   <img

@@ -1,0 +1,55 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+.header {
+  position: relative;
+  background: linear-gradient(
+    60deg,
+    rgb(203, 218, 219) 4%,
+    rgb(98, 228, 196) 30%,
+    rgb(13, 70, 113) 95%
+  );
+  color: rgb(238, 236, 236);
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  &__logo {
+    width: 1.5rem;
+    display: block;
+    color: var(--color-animated-3);
+    @media (min-width: $media-sm) {
+      max-width: 2.5rem;
+      width: 100%;
+    }
+  }
+
+  &__name {
+    font-family: "Splash", cursive;
+    font-size: 1.2rem;
+    color: var(--color-animated-3);
+    display: block;
+
+    @media (min-width: $media-sm) {
+      font-size: 2.3rem;
+    }
+  }
+}
+
+.inner-header {
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+
+  @media (min-width: $media-sm) {
+    height: 25vh;
+    padding: 1rem;
+  }
+}

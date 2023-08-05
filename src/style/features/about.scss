@@ -47,7 +47,7 @@
 
       & h3 {
         font-size: 1.5rem;
-        color: rgb(145, 17, 98);
+        color: var(--color-carmine-3);
         font-family: "Caveat", cursive;
         @media (min-width: $media-sm) {
           font-size: 1.7rem;

@@ -1,10 +1,5 @@
 .song {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: calc(
-    100vh - 4rem
-  ); // Postavljanje visine na 100% visine pogleda (viewport height)
+  min-height: calc(100vh - 4rem);
   margin-bottom: 2rem;
 
   &__input__wrapper {
@@ -28,10 +23,10 @@
     border-radius: var(--border-rounded);
     flex: 1;
     margin-bottom: 0.5rem;
-    box-shadow: var(--custom-box-shadow);
+    box-shadow: var(--light-box-shadow);
 
     @media (min-width: $media-sm) {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       padding: 0.6rem;
       padding-left: 2.5rem;
       margin-right: 1rem;

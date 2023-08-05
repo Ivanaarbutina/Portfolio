@@ -23,7 +23,7 @@ const SearchApp = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const fetchData = (term: string) => {
-    fetch(` https://itunes.apple.com/search?term=${term}&entity=song`)
+    fetch(`https://itunes.apple.com/search?term=${term}&entity=song`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data.results);
@@ -32,16 +32,18 @@ const SearchApp = () => {
       })
       .catch((error) => {
         console.error(error);
-        setError(error);
+        setError("There was an error fetching data.");
+        setSearchResults(null);
         setIsLoading(false);
       });
   };
+
   return (
-    <div className="song">
-      <Container size="lg">
+    <Container size="lg">
+      <h2>Search App</h2>
+      <div className="song">
         <img className="song__img" src={song} alt="Song icon" />
-        <h2>Search App</h2>
-        <div className="song__input__wrapper">
+        <header className="song__input__wrapper">
           <input
             className="song__input"
             placeholder="Enter a song name"
@@ -54,14 +56,15 @@ const SearchApp = () => {
             text="Search"
             onClick={() => {
               setIsLoading(true);
+              setError("");
               fetchData(searchTerm);
             }}
           ></Button>
-        </div>
-        <div className="song__grid">
+        </header>
+        <main className="song__grid">
           {isLoading ? (
             <div>Loading...</div>
-          ) : searchResults ? (
+          ) : searchResults && searchResults.length > 0 ? (
             searchResults.map((result, index) => {
               return (
                 <div key={index} className="song__card">
@@ -89,12 +92,13 @@ const SearchApp = () => {
                 </div>
               );
             })
-          ) : (
-            <div>{error ? error : "Nema pronađenih rezultata"}</div>
+          ) : null}
+          {error && !isLoading && searchResults === null && (
+            <div>No results</div>
           )}
-        </div>
-      </Container>
-    </div>
+        </main>
+      </div>
+    </Container>
   );
 };
 
