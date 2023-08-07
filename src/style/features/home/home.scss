@@ -58,13 +58,13 @@
 
   &__description {
     &__text {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       color: var(--color-animated-3);
       font-family: "Caveat", cursive;
       margin-right: 0.5rem;
 
       @media (min-width: $media-xs) {
-        font-size: 1.35rem;
+        font-size: 1.6rem;
         margin-right: 1.3rem;
       }
       @media (min-width: $media-lg) {

@@ -1,5 +1,4 @@
 .home__projects {
-  margin-top: 3rem;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -8,9 +7,9 @@
   @media (min-width: $media-md) {
     padding: 1rem;
     text-align: start;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
-    margin-top: 1rem;
   }
 
   &__wrapper {
@@ -18,44 +17,51 @@
     border-radius: var(--border-rounded);
     box-shadow: var(--blue-box-shadow);
     margin-bottom: 4rem;
-    padding: 1rem;
+    padding: 0.8rem;
     margin: 0.5rem;
   }
 
   &__title {
-    font-family: "Lato", sans-serif;
+    font-family: "Caveat", cursive;
     color: var(--color-white-400);
     text-decoration: underline;
     text-decoration-color: var(--color-animated-2);
-    font-size: 1.3rem;
-    font-weight: 800;
+    font-size: 2.1rem;
+    font-weight: 500;
     transition: all 250ms ease-in-out;
-    text-transform: uppercase;
+
     margin-bottom: 1rem;
     @media (min-width: $media-sm) {
-      font-size: 1.9rem;
+      font-size: 2.4rem;
     }
   }
 
   &__desc {
     color: var(--color-white-400);
-    font-size: 1.1rem;
-    font-family: "Caveat", cursive;
-    margin: 1rem auto;
+    font-size: 0.9rem;
+    margin: 0 auto;
+    padding: 0.3rem;
+    max-width: 27rem;
+
     @media (min-width: $media-xs) {
-      font-size: 1.3rem;
+      font-size: 1.1rem;
     }
     @media (min-width: $media-lg) {
-      font-size: 1.7rem;
-      margin-right: 1rem;
+      font-size: 1.2rem;
+      max-width: 40rem;
     }
   }
 
   &__work {
-    font-family: "Caveat", cursive;
     color: var(--color-animated-2);
     text-decoration: none;
+    text-transform: uppercase;
     transition: all 250ms ease-in-out;
+    font-size: 1rem;
+
+    @media (min-width: $media-sm) {
+      font-size: 1.3rem;
+    }
     &:hover {
       color: var(--color-carmine-2);
     }
@@ -63,8 +69,11 @@
 
   &__img {
     display: block;
-    width: 15rem;
+    width: 12rem;
     margin: 0 auto;
+    @media (min-width: $media-sm) {
+      width: 18rem;
+    }
   }
   &__main {
     display: grid;

@@ -5,15 +5,16 @@
   border-radius: var(--border-rounded);
   color: var(--color-white-400);
   margin: 1rem;
-  padding: 1rem;
+  padding: 0.8rem;
   overflow: hidden;
+  max-width: 30rem;
   box-shadow: var(--custom-box-shadow);
   transition: all 250ms ease-in-out;
-  max-width: 32rem;
-  min-height: 39rem;
   font-family: "Nunito", sans-serif;
   @media (min-width: $media-md) {
     padding: 1.5rem;
+    max-width: 32rem;
+    min-height: 39rem;
   }
 
   &:hover {
@@ -23,7 +24,7 @@
   &__wrapper {
     display: grid;
     grid-gap: 2rem;
-    margin-top: 1rem;
+    margin: 1rem;
     justify-items: center;
     grid-template-columns: repeat(1, 1fr);
     @media (min-width: $media-xl) {
@@ -45,7 +46,7 @@
   }
 
   &__desc {
-    margin-top: 10px;
+    margin-top: 0.5rem;
     font-size: 1rem;
     text-align: center;
     color: var(--color-carmine-1);
@@ -55,10 +56,13 @@
   }
 
   &__name {
-    font-size: 2.3rem;
+    font-size: 1.9rem;
     font-weight: 600;
     text-align: center;
     color: var(--color-animated-3);
+    @media (min-width: $media-sm) {
+      font-size: 2.3rem;
+    }
   }
 
   &__icon {

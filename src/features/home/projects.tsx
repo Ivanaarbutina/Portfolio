@@ -63,7 +63,7 @@ const Projects = () => {
     <Container size="lg">
       <div className="home__projects__wrapper">
         <header className="home__projects">
-          <div className="home">
+          <div className="home__box">
             <h3 className="home__projects__title">My recent projects</h3>
             <p className="home__projects__desc">
               These applications represent diverse examples of projects I have
