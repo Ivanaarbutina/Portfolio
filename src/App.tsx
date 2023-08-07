@@ -20,7 +20,7 @@ function App() {
           <Route path="/work" element={<Work />} />
           <Route path="/search-app" element={<SearchApp />} />
           <Route path="/to-do-list" element={<ToDo />} />
-          <Route path="/neurope" element={<Europe />} />
+          <Route path="/europe" element={<Europe />} />
         </Route>
       </Routes>
     </>
