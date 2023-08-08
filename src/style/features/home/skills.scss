@@ -1,32 +1,37 @@
 .skills {
-  margin: 2rem auto;
+  margin: 2rem;
   display: flex;
-
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
 
-  @media (min-width: $media-sm) {
+  &__box {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    box-shadow: var(--light-box-shadow);
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.4rem;
+    width: 3.8rem;
+    color: var(--color-gray-300);
+    font-size: 0.7rem;
+    @media (min-width: $media-sm) {
+      padding: 0.5rem;
+      width: 5rem;
+      font-size: 0.8rem;
+    }
+    &:hover {
+      box-shadow: var(--custom-box-shadow);
+    }
   }
 
   &__icon {
-    padding: 0.3rem;
-    box-shadow: 7px 7px 15px #8c8a8a;
-    width: 2rem;
-    border-radius: 0.5rem;
-    margin: 0.2rem;
-    @media (min-width: 595px) {
-      width: 3rem;
-    }
-    @media (min-width: $media-md) {
-      padding: 0.7rem;
-      margin: 1rem;
-      width: 3.8rem;
-    }
-
-    &:hover {
-      box-shadow: 8px 8px 25px #646363;
+    width: 2.1rem;
+    margin-bottom: 0.2rem;
+    @media (min-width: $media-sm) {
+      width: 2.5rem;
     }
   }
 }

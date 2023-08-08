@@ -8,14 +8,15 @@ import GitIcon from "./../../../assets/github_4926624.png";
 
 export type IconType = {
   img: string;
+  name: string;
 };
 
 export const iconsList: IconType[] = [
-  { img: Html },
-  { img: Css },
-  { img: JavaSc },
-  { img: TypeSc },
-  { img: React },
-  { img: Sass },
-  { img: GitIcon },
+  { img: Html, name: "HTML" },
+  { img: Css, name: "CSS" },
+  { img: JavaSc, name: "JavaScript" },
+  { img: TypeSc, name: "TypeScript" },
+  { img: React, name: "React" },
+  { img: Sass, name: "SASS" },
+  { img: GitIcon, name: "GitHub" },
 ];

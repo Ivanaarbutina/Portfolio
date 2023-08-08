@@ -19,30 +19,7 @@
   span {
     opacity: 0;
     transform: scale(0);
-    animation: fadeIn 10s infinite;
-  }
-
-  &::before,
-  &::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    height: 100%;
-    background: white;
-    opacity: 0;
-    transform: scale(0);
-  }
-
-  &::before {
-    left: 50%;
-    animation: slideLeft 10s cubic-bezier(0.7, -0.6, 0.3, 1.5) infinite;
-  }
-
-  &::after {
-    right: 50%;
-    animation: slideRight 10s cubic-bezier(0.7, -0.6, 0.3, 1.5) infinite;
+    animation: fadeIn 9s infinite;
   }
 }
 

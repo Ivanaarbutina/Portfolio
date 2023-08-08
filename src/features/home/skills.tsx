@@ -7,8 +7,13 @@ const Skills = () => {
     <Container size="lg">
       <TextSlider />
       <div className="skills">
-        {iconsList.map((icon, index) => {
-          return <img key={index} src={icon.img} className="skills__icon" />;
+        {iconsList.map((icon) => {
+          return (
+            <div key={icon.name} className="skills__box">
+              <img src={icon.img} className="skills__icon" />
+              <span>{icon.name}</span>
+            </div>
+          );
         })}
       </div>
     </Container>
