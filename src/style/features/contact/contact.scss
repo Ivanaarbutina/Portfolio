@@ -33,8 +33,10 @@
     font-size: 1.1rem;
     color: var(--color-animated-3);
     font-family: "Caveat", cursive;
+    margin: 0 auto;
     @media (min-width: $media-sm) {
       font-size: 1.7rem;
+      max-width: 32rem;
     }
   }
 

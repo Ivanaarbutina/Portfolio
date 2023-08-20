@@ -1,31 +1,25 @@
 import { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 const TextSlider = () => {
   const revealTextRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     let delay = 0.3;
-
     if (revealTextRef.current) {
       let revealText = revealTextRef.current;
-      let letters = revealText.textContent?.split("") || [];
+      let text = t("skills");
       revealText.textContent = "";
-      let middle = letters.filter((e) => e !== " ").length / 2;
 
-      letters.forEach((letter: string, i: number) => {
-        let span = document.createElement("span");
-        span.textContent = letter;
-        span.style.animationDelay = `${delay + Math.abs(i - middle) * 0.1}s`;
-        revealText.append(span);
-      });
+      let span = document.createElement("span");
+      span.textContent = text;
+      span.style.animationDelay = `${delay}s`;
+      revealText.append(span);
     }
-  }, []);
+  }, [t]);
 
-  return (
-    <div className="reveal" ref={revealTextRef}>
-      | my skills |
-    </div>
-  );
+  return <div className="reveal" ref={revealTextRef}></div>;
 };
 
 export default TextSlider;

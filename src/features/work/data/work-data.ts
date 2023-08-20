@@ -5,46 +5,42 @@ import europe from "./../../../assets/europe-pic.png";
 
 type WorkType = {
   path: string;
-  descript: string;
+  descriptKey: string;
   gitHub: string;
   img: string;
-  name: string;
+  nameKey: string;
 };
 
 export const works: WorkType[] = [
   {
     path: "/search-app",
-    descript:
-      "This application is a music search app developed using React, TypeScript, and external APIs. It provides users with a seamless interface to search for their favorite songs and preview audio clips. The app leverages the iTunes API to fetch search results based on user input.",
+    descriptKey: "project-1-desc",
     gitHub:
       "https://github.com/Ivanaarbutina/New-react-app/blob/main/src/pages/search-app.tsx",
     img: searchApp,
-    name: "Music search App",
+    nameKey: "project-1",
   },
   {
     path: "https://ivanaarbutina.github.io/algebra-seminarski/",
-    descript:
-      "This application is a real-time chat app built using React and Scaledrone for WebSocket communication. It allows users to join a chat room and exchange messages with other users in real-time. Each user is represented by a randomly generated username and a unique color .",
+    descriptKey: "project-2-desc",
     gitHub: "https://github.com/Ivanaarbutina/algebra-seminarski.git",
     img: chatApp,
-    name: "Chat Application",
+    nameKey: "project-2",
   },
   {
     path: "/to-do-list",
-    descript:
-      "This application is a simple To-Do List app developed using React. It allows users to create, manage, and track their tasks or to-do items. The app provides a clean and user-friendly interface for adding new tasks, marking tasks as completed, and deleting tasks as they are completed.",
+    descriptKey: "project-3-desc",
     gitHub:
       "https://github.com/Ivanaarbutina/New-react-app/blob/main/src/pages/todo.tsx",
     img: toDo,
-    name: "To do list",
+    nameKey: "project-3",
   },
   {
     path: "/europe",
-    descript:
-      "The Europe uses the Fetch API to retrieve data from the RestCountries API, which provides detailed information about countries worldwide. The application leverages React's state and effect hooks to manage the data and provide real-time updates to the user interface.",
+    descriptKey: "project-4-desc",
     gitHub:
       "https://github.com/Ivanaarbutina/New-react-app/blob/main/src/pages/europe.tsx",
     img: europe,
-    name: "Europe",
+    nameKey: "project-4",
   },
 ];

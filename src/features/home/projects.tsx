@@ -1,86 +1,25 @@
-import searchApp from "./../../assets/search-app.png";
-import todo from "./../../assets/planer1.png";
-import chatApp from "./../../assets/chat1.png";
 import Container from "../../components/container";
 import work from "./../../assets/work.png";
-import europe from "./../../assets/europe-pic.png";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import react from "./../../assets/react.svg";
-import typeSc from "./../../assets/typescript_5968381.png";
-import sass from "./../../assets/sass_919831.png";
-
-type ProjectType = {
-  name: string;
-  link: string;
-  desc: string;
-  img: string;
-  reactIcon: string;
-  typeScIcon: string;
-  sassIcon: string;
-};
-
-const projects: ProjectType[] = [
-  {
-    name: "Music search App",
-    link: "/search-app",
-    desc: "Find your favorite song and enjoy...",
-    img: searchApp,
-    reactIcon: react,
-    typeScIcon: typeSc,
-    sassIcon: sass,
-  },
-  {
-    name: "To do App",
-    link: "/to-do-list",
-    desc: " Create, manage, and track your task...",
-    img: todo,
-    reactIcon: react,
-    typeScIcon: typeSc,
-    sassIcon: sass,
-  },
-  {
-    name: "Chat App",
-    link: "https://ivanaarbutina.github.io/algebra-seminarski/",
-    desc: "Join a chat room...",
-    img: chatApp,
-    reactIcon: react,
-    typeScIcon: typeSc,
-    sassIcon: sass,
-  },
-  {
-    name: "Europe",
-    link: "/europe",
-    desc: "Information about countries worldwide...",
-    img: europe,
-    reactIcon: react,
-    typeScIcon: typeSc,
-    sassIcon: sass,
-  },
-];
+import ProjectBox from "./projects-box";
 
 const Projects = () => {
+  const { t } = useTranslation();
   return (
     <Container size="lg">
       <div className="home__projects__wrapper">
         <header className="home__projects">
           <div className="home__box">
-            <h3 className="home__projects__title">My recent projects</h3>
+            <h3 className="home__projects__title">{t("projects-title")}</h3>
+            <p className="home__projects__desc">{t("projects-desc")}</p>
             <p className="home__projects__desc">
-              These applications represent diverse examples of projects I have
-              developed using React and TypeScript, as well as integrating
-              external APIs for communication with other services. Each of these
-              applications has its unique focus and functionalities, but they
-              all share common characteristics such as clean user interfaces,
-              responsive design, and fast and efficient performance.
-            </p>
-            <p className="home__projects__desc">
-              For detailed insights into each project, you can explore the
+              {t("projects-desc-2")}
               <Link className="home__projects__work" target="_blank" to="work">
                 {" "}
-                ' Work '{" "}
+                ' {t("projects-link")} '{" "}
               </Link>
-              section, where you will find comprehensive descriptions and
-              showcases of the applications.
+              {t("projects-desc-3")}
             </p>
           </div>
           <div>
@@ -91,33 +30,7 @@ const Projects = () => {
             />
           </div>
         </header>
-        <section className="home__projects__main">
-          {projects.map((project: ProjectType) => {
-            return (
-              <div key={project.name} className="project__box">
-                <img src={project.img} className="project__box__img" />
-                <div className="project__box__layer">
-                  <Link
-                    to={project.link}
-                    target="_blank"
-                    className="project__box__link"
-                  >
-                    <h2>{project.name}</h2>
-                    <p>{project.desc}</p>
-                  </Link>
-                </div>
-                <div>
-                  <img src={project.reactIcon} className="project__box__icon" />
-                  <img
-                    src={project.typeScIcon}
-                    className="project__box__icon"
-                  />
-                  <img src={project.sassIcon} className="project__box__icon" />
-                </div>
-              </div>
-            );
-          })}
-        </section>
+        <ProjectBox />
       </div>
     </Container>
   );

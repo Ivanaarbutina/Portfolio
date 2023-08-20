@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import mail from "./../assets/mail.png";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <div className="footer">
       <div className="footer__links">
         <div>
-          Illustration by{" "}
+          {t("footer-link1")}{" "}
           <Link
             className="footer__link"
             to="https://icons8.com/illustrations/author/zD2oqC8lLBBA"
@@ -17,7 +19,7 @@ const Footer = () => {
           </Link>
         </div>
         <div>
-          and by{" "}
+          &{" "}
           <Link
             className="footer__link"
             to="https://icons8.com/illustrations/author/CkHJmwURlxnt"
@@ -28,7 +30,7 @@ const Footer = () => {
           </Link>
         </div>
         <div>
-          from{" "}
+          {t("footer-link2")}{" "}
           <Link
             className="footer__link"
             to="https://icons8.com/illustrations"
