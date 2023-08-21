@@ -47,7 +47,7 @@
   "project-4-desc": "The Europe uses the Fetch API to retrieve data from the RestCountries API, which provides detailed information about countries worldwide. The application leverages React's state and effect hooks to manage the data and provide real-time updates to the user interface.",
   "project-button": "view project",
   "contact-section": "Contact",
-  "contact-title": "Let's work together",
+  "contact-title": "Let's work together!",
   "contact-desc": " Please reach out, I would love to hear more about you, your project and how can I help!",
   "contact-mail": "Send me an email",
   "contact-location": "Croatia"

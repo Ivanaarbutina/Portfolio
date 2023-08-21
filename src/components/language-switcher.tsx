@@ -7,10 +7,17 @@ const LanguageSwitcher = () => {
     i18n.changeLanguage(lang);
   };
   return (
-    <div>
-      <select onChange={(e) => changeLanguage(e.target.value)}>
-        <option value="en">EN</option>
-        <option value="hr">HR</option>
+    <div className="translation">
+      <select
+        className="language-switcher"
+        onChange={(e) => changeLanguage(e.target.value)}
+      >
+        <option className="language-switcher__option" value="en">
+          EN
+        </option>
+        <option className="language-switcher__option" value="hr">
+          HR
+        </option>
       </select>
     </div>
   );

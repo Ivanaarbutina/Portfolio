@@ -21,7 +21,7 @@
     width: 1.5rem;
     display: block;
     color: var(--color-animated-3);
-    @media (min-width: $media-sm) {
+    @media (min-width: $media-md) {
       max-width: 2.5rem;
       width: 100%;
     }
@@ -33,7 +33,7 @@
     color: var(--color-animated-3);
     display: block;
 
-    @media (min-width: $media-sm) {
+    @media (min-width: $media-md) {
       font-size: 2.3rem;
     }
   }
@@ -45,11 +45,32 @@
   display: flex;
   align-items: center;
   text-align: center;
-  justify-content: space-between;
   padding: 0.5rem;
+  justify-content: space-between;
 
   @media (min-width: $media-sm) {
     height: 25vh;
     padding: 1rem;
+  }
+}
+
+.inner-header-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: $media-md) {
+    flex-direction: row;
+  }
+}
+.inner-header-section.block {
+  position: absolute;
+  top: 0; /* Prilagodite željeni razmak između navigacije i vrha ekrana */
+  right: 0;
+  width: 100%;
+  background: var(--color-animated-3);
+  padding: 1.5rem;
+  z-index: 100;
+  @media (min-width: $media-sm) {
+    padding: 2rem;
   }
 }
