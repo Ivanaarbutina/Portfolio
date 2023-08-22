@@ -43,7 +43,7 @@ const Header = () => {
       <div className="inner-header ">
         <Link to={"/"} className="header__box">
           <img className="header__logo" src={Code} alt="Header logo" />
-          <span className="header__name">Ivana</span>
+          <span className="header__name">Ivana Arbutina</span>
         </Link>
         <section
           className={`inner-header-section ${showHeaderSection ? "block" : ""}`}

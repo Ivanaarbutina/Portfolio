@@ -36,10 +36,10 @@
     }
 
     & h1 {
-      font-family: "Lato", sans-serif;
+      font-family: "Caveat", cursive;
       font-weight: 700;
       font-size: 2.7rem;
-      color: var(--color-animated-2);
+      color: var(--color-animated-3);
       @media (min-width: $media-md) {
         font-size: 3rem;
       }
@@ -53,26 +53,37 @@
 
   &__description {
     &__text {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       color: var(--color-animated-3);
-      font-family: "Caveat", cursive;
       margin-right: 0.5rem;
 
       @media (min-width: $media-xs) {
-        font-size: 1.6rem;
-        margin-right: 1.3rem;
+        font-size: 1.4rem;
+        margin-right: 1.5rem;
       }
       @media (min-width: $media-lg) {
-        font-size: 1.8rem;
-        margin-right: 1rem;
+        font-size: 1.3rem;
+        margin-right: 1.8rem;
+      }
+
+      & span {
+        color: var(--color-animated-2);
+        font-weight: 900;
       }
     }
-
     &__name {
       font-family: "Caveat", cursive;
-      font-size: 2rem;
+      font-size: 2.7rem;
       font-weight: 700;
       color: var(--color-animated-3);
+      @media (min-width: $media-md) {
+        font-size: 3rem;
+      }
+      @media (min-width: $media-lg) {
+        font-size: 4.5rem;
+        margin-right: 1rem;
+        margin-left: 0;
+      }
     }
   }
 

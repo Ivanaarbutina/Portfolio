@@ -12,15 +12,16 @@ const Intro = () => {
       <div className="home__info">
         <div>
           <h1>
-            Front-End<br></br> Developer
+            {t("intro")} <br></br>
+            <span className="home__description__name">
+              {t("intro-2")} Ivana !
+            </span>{" "}
           </h1>
           <div className="home__description">
             <p className="home__description__text">
-              {t("intro")}{" "}
-              <span className="home__description__name">Ivana Arbutina</span>.{" "}
+              {t("intro-desc-1")} <span>junior front-end developer</span>{" "}
               {t("intro-desc")}
             </p>
-            <p className="home__description__text">{t("intro-second-desc")}</p>
           </div>
           <Link
             to="https://www.linkedin.com/in/ivana-arbutina-340660285/"
