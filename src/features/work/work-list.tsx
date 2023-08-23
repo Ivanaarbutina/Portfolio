@@ -16,6 +16,11 @@ const WorkList = () => {
               <div className="work__section">
                 <p className="work__name">{t(work.nameKey)}</p>
                 <p className="work__desc">{t(work.descriptKey)}</p>
+                <div>
+                  <img src={work.reactIcon} className="work__icon" />
+                  <img src={work.typeScIcon} className="work__icon" />
+                  <img src={work.sassIcon} className="work__icon" />
+                </div>
               </div>
               <div className="work__link">
                 <a href={path} target="_blank">
