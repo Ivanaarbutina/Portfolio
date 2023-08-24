@@ -26,7 +26,6 @@ const WorkList = () => {
               <div className="work__link">
                 <a href={path} target="_blank" className="work__link__project">
                   <img src={viewIcon} />
-
                   {t("project-showcase")}
                 </a>
                 <a href={gitHub} target="_blank" className="work__github">
