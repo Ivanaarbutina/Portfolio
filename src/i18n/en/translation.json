@@ -46,7 +46,7 @@
   "project-3-desc": "This application is a simple To-Do List app developed using React. It allows users to create, manage, and track their tasks or to-do items. The app provides a clean and user-friendly interface for adding new tasks, marking tasks as completed, and deleting tasks as they are completed.",
   "project-4": "Europe",
   "project-4-desc": "The Europe uses the Fetch API to retrieve data from the RestCountries API, which provides detailed information about countries worldwide. The application leverages React's state and effect hooks to manage the data and provide real-time updates to the user interface.",
-  "project-button": "view project",
+  "project-showcase": " Showcase",
   "contact-section": "Contact",
   "contact-title": "Let's work together!",
   "contact-desc": " Please reach out, I would love to hear more about you, your project and how can I help!",

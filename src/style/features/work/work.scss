@@ -108,4 +108,31 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &__project {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-decoration: none;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--color-animated-3);
+    font-weight: 700;
+    transition: all 250ms ease-in-out;
+
+    &:hover {
+      color: #dbf6ed;
+    }
+
+    & img {
+      width: 1.8rem;
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+    @media (min-width: $media-sm) {
+      font-size: 1.1rem;
+    }
+  }
 }
