@@ -8,19 +8,20 @@ const About = () => {
     <Container size="lg">
       <div className="about">
         <img className="about__img" src={aboutIcon} alt="Woman with laptop" />
-        <h3 className="about__title">{t("skills-title")}</h3>
-        <section>
-          {aboutlist.map((section, index) => {
-            return (
-              <ul className="about__list" key={index}>
-                <li className="about__list__desc">
-                  <h3 className="about__list__desc">{t(section.titleKey)}</h3>
-                  {t(section.descKey)}
-                </li>
-              </ul>
-            );
-          })}
-        </section>
+        <div>
+          <h3 className="about__title">{t("skills-title")}</h3>
+          <section>
+            {aboutlist.map((section, index) => {
+              return (
+                <ul className="about__list" key={index}>
+                  <li className="about__list__desc">
+                    <h3 className="about__list__desc">{t(section.titleKey)}</h3>
+                  </li>
+                </ul>
+              );
+            })}
+          </section>
+        </div>
       </div>
     </Container>
   );

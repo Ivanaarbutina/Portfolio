@@ -22,20 +22,20 @@
   }
 
   &__title {
-    font-size: 1.7rem;
+    font-size: 2.5rem;
     color: var(--color-animated-3);
     font-family: "Caveat", cursive;
     @media (min-width: $media-sm) {
-      font-size: 2rem;
+      font-size: 4.5rem;
     }
   }
   &__desc {
     font-size: 1.1rem;
     color: var(--color-animated-3);
-    font-family: "Caveat", cursive;
+
     margin: 1rem auto;
     @media (min-width: $media-sm) {
-      font-size: 1.7rem;
+      font-size: 1.2rem;
       max-width: 32rem;
     }
   }
@@ -46,15 +46,10 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      font-family: "Caveat", cursive;
-      font-size: 1rem;
       color: var(--color-carmine-1);
       text-decoration: none;
       transition: all 250ms ease;
 
-      @media (min-width: $media-sm) {
-        font-size: 1.5rem;
-      }
       &:hover {
         color: var(--color-carmine-2);
         transform: scale(1.1);
@@ -64,9 +59,9 @@
 
   &__location {
     & a {
-      font-size: 1rem;
+      font-size: 0.8rem;
       @media (min-width: $media-sm) {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
       }
     }
     & img {
@@ -79,9 +74,9 @@
 
   &__mail {
     & a {
-      font-size: 1.1rem;
+      font-size: 0.8rem;
       @media (min-width: $media-sm) {
-        font-size: 1.7rem;
+        font-size: 1.1rem;
       }
     }
     & img {

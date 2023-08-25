@@ -10,7 +10,7 @@ const Contact = () => {
   return (
     <Container size="lg">
       <div className="contact__wrapper">
-        <h2>{t("contact-section")}</h2>
+        {/* <h2>{t("contact-section")}</h2> */}
         <h3 className="contact__title">{t("contact-title")}</h3>
         <p className="contact__desc">{t("contact-desc")}</p>
         <div className="contact">

@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Waves from "./waves";
 import Code from "./../assets/code_5568944.png";
 import { useState } from "react";
@@ -15,15 +15,15 @@ const headerLinks: LinkType[] = [
     label: "home",
   },
   {
-    path: "/about",
-    label: "about",
+    path: "#skills",
+    label: "skills",
   },
   {
-    path: "/work",
+    path: "#work",
     label: "work",
   },
   {
-    path: "/contact",
+    path: "#contact",
     label: "contact",
   },
 ];
@@ -51,14 +51,14 @@ const Header = () => {
           <nav className={`nav-menu ${showHeaderSection ? "show" : ""}`}>
             {headerLinks.map((link: LinkType) => {
               return (
-                <NavLink
+                <a
                   className={"header__nav__link"}
                   key={link.path}
-                  to={link.path}
+                  href={link.path}
                   onClick={closeNavMenu}
                 >
                   {t(link.label)}
-                </NavLink>
+                </a>
               );
             })}
           </nav>
