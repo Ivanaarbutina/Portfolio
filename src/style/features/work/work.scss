@@ -1,3 +1,10 @@
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .work {
   display: flex;
   flex-direction: column;

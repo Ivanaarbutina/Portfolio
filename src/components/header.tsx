@@ -16,7 +16,7 @@ const headerLinks: LinkType[] = [
   },
   {
     path: "#skills",
-    label: "skills",
+    label: "about",
   },
   {
     path: "#work",

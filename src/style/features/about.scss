@@ -1,9 +1,20 @@
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .about {
   margin: 7rem auto;
   padding: 1rem;
   display: flex;
   align-items: center;
   flex-direction: column;
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideInLeft 5s forwards;
+  transition: all 250ms ease-in-out;
   @media (min-width: $media-sm) {
     justify-content: space-between;
     flex-direction: row;
@@ -48,15 +59,24 @@
     }
   }
   &__list {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
     & h3 {
-      font-size: 1rem;
+      font-size: 0.9rem;
       font-weight: 300;
       color: var(--color-animated-3);
+      margin-left: 0.5rem;
 
       font-family: "Poppins", sans-serif;
       @media (min-width: $media-sm) {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
+    }
+
+    & img {
+      width: 1.5rem;
     }
   }
 }
