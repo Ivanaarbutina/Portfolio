@@ -30,6 +30,21 @@ const headerLinks: LinkType[] = [
 const Header = () => {
   const [showHeaderSection, setShowHeaderSection] = useState(false);
 
+  // Smooth scrolling navigation
+  const scrollToHref = function (e: React.MouseEvent<HTMLElement, MouseEvent>) {
+    e.preventDefault();
+    const href = e.currentTarget.getAttribute("href");
+    if (href) {
+      const target = document.querySelector(href) as HTMLElement | null;
+      if (target) {
+        window.scrollTo({
+          top: target.offsetTop,
+          behavior: "smooth",
+        });
+      }
+    }
+  };
+
   const { t } = useTranslation();
   const toggleNavMenu = () => {
     setShowHeaderSection(!showHeaderSection);
@@ -55,7 +70,10 @@ const Header = () => {
                   className={"header__nav__link"}
                   key={link.path}
                   href={link.path}
-                  onClick={closeNavMenu}
+                  onClick={(e) => {
+                    scrollToHref(e); // Poziv scrollToHref funkcije kada korisnik klikne na link
+                    closeNavMenu(); // Zatvaranje menija nakon klika na link
+                  }}
                 >
                   {t(link.label)}
                 </a>

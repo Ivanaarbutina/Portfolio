@@ -5,7 +5,7 @@
   display: flex;
   color: var(--color-animated-3);
   font-size: 2em;
-  font-family: Raleway, sans-serif;
+
   letter-spacing: 3px;
   justify-content: center;
   text-transform: uppercase;
@@ -27,21 +27,5 @@
   to {
     opacity: 1;
     transform: scale(1);
-  }
-}
-
-@keyframes slideLeft {
-  to {
-    left: -6%;
-    opacity: 1;
-    transform: scale(0.9);
-  }
-}
-
-@keyframes slideRight {
-  to {
-    right: -6%;
-    opacity: 1;
-    transform: scale(0.9);
   }
 }

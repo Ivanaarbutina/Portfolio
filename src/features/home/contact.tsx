@@ -3,15 +3,41 @@ import mail from "./../../assets/mail.png";
 import location from "./../../assets/casual-life-3d-close-up-of-pink-location-marker.png";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useInView } from "react-intersection-observer";
+import { useEffect, useState } from "react";
 
 const Contact = () => {
+  const [animationExecuted, setAnimationExecuted] = useState(false);
+
   const { t } = useTranslation();
+
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  });
+  useEffect(() => {
+    if (inView && !animationExecuted) {
+      // Pokrenite animaciju
+      const contactTitle = document.querySelector(".contact__title");
+      if (contactTitle) {
+        contactTitle.classList.add("visible");
+      }
+
+      // Postavite stanje da označite da je animacija izvršena
+      setAnimationExecuted(true);
+    }
+  }, [inView, animationExecuted]);
 
   return (
     <Container size="lg">
       <div className="contact__wrapper">
-        {/* <h2>{t("contact-section")}</h2> */}
-        <h3 className="contact__title">{t("contact-title")}</h3>
+        <h3
+          className={`contact__title slide-in ${
+            animationExecuted ? "visible" : ""
+          }`}
+          ref={ref}
+        >
+          {t("contact-title")}
+        </h3>
         <p className="contact__desc">{t("contact-desc")}</p>
         <div className="contact">
           <div className="contact__mail">

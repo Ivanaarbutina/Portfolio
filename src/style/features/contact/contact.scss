@@ -1,5 +1,10 @@
-@keyframes fadeIn {
-  to {
+@keyframes slide-in {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -29,13 +34,8 @@
 
   &__title {
     opacity: 0;
-    animation: fadeIn 3s forwards;
-    font-size: 2.5rem;
-    color: var(--color-animated-3);
-    font-family: "Caveat", cursive;
-    @media (min-width: $media-sm) {
-      font-size: 4.5rem;
-    }
+    transform: translateY(100%);
+    transition: opacity 2s ease, transform 2s ease;
   }
   &__desc {
     font-size: 0.9rem;
@@ -93,5 +93,18 @@
         width: 7rem;
       }
     }
+  }
+}
+
+.visible {
+  animation: slide-in 2s forwards ease;
+  opacity: 1;
+  transform: translateY(0);
+
+  font-size: 2.5rem;
+  color: var(--color-animated-3);
+  font-family: "Caveat", cursive;
+  @media (min-width: $media-sm) {
+    font-size: 4.5rem;
   }
 }
