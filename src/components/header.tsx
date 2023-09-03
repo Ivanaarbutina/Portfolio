@@ -54,12 +54,14 @@ const Header = () => {
     setShowHeaderSection(false);
   };
   return (
-    <header className="header">
+    <header className="header" id="header">
       <div className="inner-header ">
-        <Link to={"/"} className="header__box">
-          <img className="header__logo" src={Code} alt="Header logo" />
-          <span className="header__name">Ivana Arbutina</span>
-        </Link>
+        <div>
+          <Link to={"#header"} className="header__box">
+            <img className="header__logo" src={Code} alt="Header logo" />
+            <span className="header__name">Ivana Arbutina</span>
+          </Link>
+        </div>
         <section
           className={`inner-header-section ${showHeaderSection ? "block" : ""}`}
         >

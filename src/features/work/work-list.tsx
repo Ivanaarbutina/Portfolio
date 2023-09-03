@@ -1,11 +1,13 @@
-import { works } from "./data/work-data";
+// JavaScript
 
+import { works } from "./data/work-data";
 import GitHub from "../../assets/icons/github";
 import { useTranslation } from "react-i18next";
 import viewIcon from "./../../assets/icons/icons8-view-64.png";
 
 const WorkList = () => {
   const { t } = useTranslation();
+
   return (
     <div>
       <div className="work__wrapper">

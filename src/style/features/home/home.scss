@@ -1,3 +1,24 @@
+@keyframes right-in {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes left-in {
+  0% {
+    transform: translateX(-80%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .home {
   margin: 0.5rem;
 
@@ -19,6 +40,9 @@
     }
 
     &__img {
+      opacity: 0;
+      transform: translateY(100%);
+      transition: opacity 2s ease, transform 2s ease;
       margin-top: 1rem;
       width: 14rem;
       border-radius: var(--border-rounded);
@@ -36,6 +60,9 @@
     }
 
     & h1 {
+      opacity: 0;
+      transform: translateY(100%);
+      transition: opacity 2s ease, transform 2s ease;
       font-family: "Caveat", cursive;
       font-weight: 700;
       font-size: 2.7rem;
@@ -55,6 +82,9 @@
 
   &__description {
     &__text {
+      opacity: 0;
+      transform: translateY(100%);
+      transition: opacity 2s ease, transform 2s ease;
       font-size: 1rem;
       color: var(--color-animated-3);
       margin-right: 0.5rem;
@@ -67,7 +97,6 @@
         font-size: 1.2rem;
         margin-right: 1.8rem;
       }
-
       & span {
         color: var(--color-animated-3);
         font-size: 1rem;
@@ -113,4 +142,19 @@
       transform: scale(1.2);
     }
   }
+}
+.visible-intro {
+  animation: left-in 2s forwards ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+.visible-intro2 {
+  animation: slide-in 2s forwards ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+.visible-intro3 {
+  animation: right-in 2s forwards ease;
+  opacity: 1;
+  transform: translateY(0);
 }

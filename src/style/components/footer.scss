@@ -53,4 +53,10 @@
       color: rgb(151, 13, 98);
     }
   }
+  &__up img {
+    width: 2rem;
+    @media (min-width: $media-md) {
+      width: 2rem;
+    }
+  }
 }

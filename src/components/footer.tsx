@@ -1,9 +1,18 @@
 import { Link } from "react-router-dom";
-import mail from "./../assets/mail.png";
 import { useTranslation } from "react-i18next";
+import up from "./../assets/icons8-up-48.png";
 
 const Footer = () => {
   const { t } = useTranslation();
+  function scrollToHeader() {
+    const headerElement = document.getElementById("header");
+    if (headerElement) {
+      window.scrollTo({
+        top: headerElement.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  }
   return (
     <div className="footer">
       <div className="footer__links">
@@ -41,8 +50,8 @@ const Footer = () => {
         </div>
       </div>
       <div>
-        <Link className="footer__mail" to="mailto:ivana.arbutina2@gmail.com">
-          <img src={mail} />
+        <Link to="#" className="footer__up" onClick={scrollToHeader}>
+          <img src={up} alt="arrow" />
         </Link>
       </div>
     </div>

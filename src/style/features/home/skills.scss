@@ -17,6 +17,7 @@
     width: 3.8rem;
     color: var(--color-gray-300);
     font-size: 0.7rem;
+    transition: all 0.8s ease-in-out;
     @media (min-width: $media-sm) {
       padding: 0.5rem;
       width: 5rem;
