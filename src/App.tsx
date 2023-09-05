@@ -7,7 +7,7 @@ import ToDo from "./features/work/to-do-list";
 import Contact from "./features/home/contact";
 import About from "./features/about/about";
 import Europe from "./features/work/europe";
-import Header from "./components/header";
+
 import WorkList from "./features/work/work-list";
 
 function App() {
@@ -15,14 +15,13 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />}></Route>
+          <Route index element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/work" element={<WorkList />} />
           <Route path="/search-app" element={<SearchApp />} />
           <Route path="/to-do-list" element={<ToDo />} />
           <Route path="/europe" element={<Europe />} />
-          <Route path="/header" element={<Header />} />
         </Route>
       </Routes>
     </>

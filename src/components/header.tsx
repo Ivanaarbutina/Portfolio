@@ -44,6 +44,19 @@ const Header = () => {
       }
     }
   };
+  const scrollToContact = function (
+    e: React.MouseEvent<HTMLElement, MouseEvent>
+  ) {
+    e.preventDefault();
+    const contact = document.getElementById("contact") as HTMLElement | null;
+
+    if (contact) {
+      window.scrollTo({
+        top: contact.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
 
   const { t } = useTranslation();
   const toggleNavMenu = () => {
@@ -57,7 +70,13 @@ const Header = () => {
     <header className="header" id="header">
       <div className="inner-header ">
         <div>
-          <Link to={"#header"} className="header__box">
+          <Link
+            to="#contact"
+            className="header__box"
+            onClick={(e) => {
+              scrollToContact(e);
+            }}
+          >
             <img className="header__logo" src={Code} alt="Header logo" />
             <span className="header__name">Ivana Arbutina</span>
           </Link>

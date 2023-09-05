@@ -2,9 +2,11 @@ import { useInView } from "react-intersection-observer";
 import Container from "../../components/container";
 import { iconsList } from "./data/icon";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Skills = () => {
   const [animationExecuted, setAnimationExecuted] = useState(false);
+  const { t } = useTranslation();
 
   const { inView, ref } = useInView({ threshold: 0.5 });
   useEffect(() => {
@@ -30,7 +32,7 @@ const Skills = () => {
   }, [inView, animationExecuted]);
   return (
     <Container size="lg">
-      <h3 className="skills__title">My skills</h3>
+      <h3 className="skills__title">{t("skills")}</h3>
       <div className="skills">
         {iconsList.map((icon) => {
           return (

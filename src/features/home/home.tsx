@@ -1,3 +1,4 @@
+import Header from "../../components/header";
 import About from "../about/about";
 import Contact from "./contact";
 import Intro from "./intro";
@@ -7,7 +8,10 @@ import Skills from "./skills";
 const Home = () => {
   return (
     <div className="home">
-      <Intro />
+      <Header />
+      <div id="home">
+        <Intro />
+      </div>
       <div id="skills">
         <Skills />
         <About />

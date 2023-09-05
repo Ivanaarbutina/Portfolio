@@ -6,6 +6,7 @@ import Left from "./../../assets/icons/left-side";
 import Right from "./../../assets/icons/right-side";
 import Button from "../../components/button";
 import map from "./../../assets/3d-casual-life-map (1).png";
+import ProjectHeader from "../../components/project-header";
 
 const Europe = () => {
   const [data, setData] = useState<EuropeType[]>([]);
@@ -38,77 +39,80 @@ const Europe = () => {
     return name.includes(query.toLowerCase());
   });
   return (
-    <Container size="lg">
-      <img src={map} className="europe__map" alt="World map" />
-      <h2>Europe</h2>
-      <div className="europe">
-        <form onSubmit={handleSubmit} className="europe__form">
-          <input
-            type="text"
-            placeholder="Search country"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            className="europe__input"
-          />
-          <Button text="Search" color="blue" type="submit" size="md"></Button>
-        </form>
-        <div className="europe__table__wrapper">
-          <table className="europe__table">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Flag</th>
-                <th>Capital City</th>
-                <th>Map</th>
-                <th>Population</th>
-                <th>Borders</th>
-                <th>Car</th>
-              </tr>
-            </thead>
-            <tbody>
-              {filteredData.map((country, index) => {
-                return (
-                  <tr key={index}>
-                    <td>{country.name.common}</td>
-                    <td>
-                      <img src={country.flags.png} className="europe__img" />
-                    </td>
-                    <td>
-                      {country.capital
-                        ? country.capital.map((capital) => {
-                            return capital;
-                          })
-                        : "undefined"}
-                    </td>
+    <div>
+      <ProjectHeader />
+      <Container size="lg">
+        <img src={map} className="europe__map" alt="World map" />
+        <h2>Europe</h2>
+        <div className="europe">
+          <form onSubmit={handleSubmit} className="europe__form">
+            <input
+              type="text"
+              placeholder="Search country"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              className="europe__input"
+            />
+            <Button text="Search" color="blue" type="submit" size="md"></Button>
+          </form>
+          <div className="europe__table__wrapper">
+            <table className="europe__table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Flag</th>
+                  <th>Capital City</th>
+                  <th>Map</th>
+                  <th>Population</th>
+                  <th>Borders</th>
+                  <th>Car</th>
+                </tr>
+              </thead>
+              <tbody>
+                {filteredData.map((country, index) => {
+                  return (
+                    <tr key={index}>
+                      <td>{country.name.common}</td>
+                      <td>
+                        <img src={country.flags.png} className="europe__img" />
+                      </td>
+                      <td>
+                        {country.capital
+                          ? country.capital.map((capital) => {
+                              return capital;
+                            })
+                          : "undefined"}
+                      </td>
 
-                    <td>
-                      <Link to={country.maps.googleMaps} target="_blank">
-                        {" "}
-                        Map
-                      </Link>
-                    </td>
-                    <td>{country.population.toLocaleString("en-US")}</td>
-                    <td>
-                      {country.borders
-                        ? country.borders.map((borders) => {
-                            return borders + " ";
-                          })
-                        : "no borders"}
-                    </td>
-                    <td>
-                      {country.car.side === "left" ? <Left /> : <Right />}
-                      {country.car.signs.map((signs) => {
-                        return signs + " ";
-                      })}
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+                      <td>
+                        <Link to={country.maps.googleMaps} target="_blank">
+                          {" "}
+                          Map
+                        </Link>
+                      </td>
+                      <td>{country.population.toLocaleString("en-US")}</td>
+                      <td>
+                        {country.borders
+                          ? country.borders.map((borders) => {
+                              return borders + " ";
+                            })
+                          : "no borders"}
+                      </td>
+                      <td>
+                        {country.car.side === "left" ? <Left /> : <Right />}
+                        {country.car.signs.map((signs) => {
+                          return signs + " ";
+                        })}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
         </div>
-      </div>
-    </Container>
+      </Container>
+    </div>
   );
 };
 

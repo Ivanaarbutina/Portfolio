@@ -1,5 +1,3 @@
-// JavaScript
-
 import { works } from "./data/work-data";
 import GitHub from "../../assets/icons/github";
 import { useTranslation } from "react-i18next";

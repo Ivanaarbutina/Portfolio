@@ -1,18 +1,9 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import up from "./../assets/icons8-up-48.png";
 
 const Footer = () => {
   const { t } = useTranslation();
-  function scrollToHeader() {
-    const headerElement = document.getElementById("header");
-    if (headerElement) {
-      window.scrollTo({
-        top: headerElement.offsetTop,
-        behavior: "smooth",
-      });
-    }
-  }
+
   return (
     <div className="footer">
       <div className="footer__links">
@@ -48,11 +39,6 @@ const Footer = () => {
             Ouch!
           </Link>
         </div>
-      </div>
-      <div>
-        <Link to="#" className="footer__up" onClick={scrollToHeader}>
-          <img src={up} alt="arrow" />
-        </Link>
       </div>
     </div>
   );

@@ -5,14 +5,24 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
+import up from "./../../assets/icons8-up-48.png";
 
 const Contact = () => {
   const [animationExecuted, setAnimationExecuted] = useState(false);
 
   const { t } = useTranslation();
+  function scrollToHeader() {
+    const headerElement = document.getElementById("header");
+    if (headerElement) {
+      window.scrollTo({
+        top: headerElement.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  }
 
   const { ref, inView } = useInView({
-    threshold: 0.5,
+    threshold: 0,
   });
   useEffect(() => {
     if (inView && !animationExecuted) {
@@ -51,6 +61,11 @@ const Contact = () => {
             </Link>
           </div>
         </div>
+      </div>
+      <div>
+        <Link to="#" className="footer__up" onClick={scrollToHeader}>
+          <img src={up} alt="arrow" />
+        </Link>
       </div>
     </Container>
   );
