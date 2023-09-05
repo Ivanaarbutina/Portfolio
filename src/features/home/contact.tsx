@@ -16,13 +16,11 @@ const Contact = () => {
   });
   useEffect(() => {
     if (inView && !animationExecuted) {
-      // Pokrenite animaciju
       const contactTitle = document.querySelector(".contact__title");
       if (contactTitle) {
         contactTitle.classList.add("visible");
       }
 
-      // Postavite stanje da označite da je animacija izvršena
       setAnimationExecuted(true);
     }
   }, [inView, animationExecuted]);

@@ -10,7 +10,7 @@ const About = () => {
   const [animationExecuted, setAnimationExecuted] = useState(false);
   const { t } = useTranslation();
 
-  const { inView, ref } = useInView({ threshold: 0.2 });
+  const { inView, ref } = useInView({ threshold: 0.5 });
   useEffect(() => {
     const animateElements = async () => {
       if (inView && !animationExecuted) {
@@ -21,7 +21,7 @@ const About = () => {
           // Odgodite dodavanje klase za svaki element
           await new Promise<void>((resolve) => {
             setTimeout(() => {
-              listElement.classList.add("visible-intro3");
+              listElement.classList.add("visible-intro4");
               resolve();
             }, 30 * index);
           });

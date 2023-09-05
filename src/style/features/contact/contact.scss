@@ -33,6 +33,9 @@
   }
 
   &__title {
+    font-size: 2.5rem;
+    color: var(--color-animated-3);
+    font-family: "Caveat", cursive;
     opacity: 0;
     transform: translateY(100%);
     transition: opacity 2s ease, transform 2s ease;
@@ -101,9 +104,6 @@
   opacity: 1;
   transform: translateY(0);
 
-  font-size: 2.5rem;
-  color: var(--color-animated-3);
-  font-family: "Caveat", cursive;
   @media (min-width: $media-sm) {
     font-size: 4.5rem;
   }

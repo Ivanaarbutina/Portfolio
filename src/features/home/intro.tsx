@@ -16,8 +16,6 @@ const Intro = () => {
   });
   useEffect(() => {
     if (inView && !animationExecuted) {
-      // Pokrenite animaciju za sve navedene elemente
-
       const nameElement = document.querySelector(".home__intro");
       const descElement = document.querySelector(".home__description__text");
       const imgElement = document.querySelector(".home__info__img");
@@ -32,7 +30,6 @@ const Intro = () => {
         imgElement.classList.add("visible-intro3");
       }
 
-      // Postavite stanje da označite da je animacija izvršena
       setAnimationExecuted(true);
     }
   }, [inView, animationExecuted]);
