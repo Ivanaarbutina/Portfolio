@@ -83,4 +83,6 @@ $media-xl: 75em; //1200px
 @import "./features/work/to-do-list.scss";
 @import "./features/work/work.scss";
 //utils
+@import "./utils/animations.scss";
 @import "./utils/grid.scss";
+@import "./utils/visible.scss";

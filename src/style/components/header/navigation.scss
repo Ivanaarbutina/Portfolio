@@ -1,9 +1,9 @@
 .hamburger {
-  display: block; /* Prikaz na manjim ekranima */
-  margin-right: 10px; /* Prilagodite željeni razmak između hamburger ikone i logotipa */
+  display: block;
+  margin-right: 10px;
   cursor: pointer;
   @media (min-width: $media-md) {
-    display: none; /* Inicijalno skrivena na većim ekranima */
+    display: none;
   }
 }
 

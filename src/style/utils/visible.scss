@@ -1,0 +1,35 @@
+.visible {
+  animation: slide-in 2s forwards ease;
+  opacity: 1;
+  transform: translateY(0);
+
+  @media (min-width: $media-sm) {
+    font-size: 4.5rem;
+  }
+}
+
+.visible-intro {
+  animation: left-in 2s forwards ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+.visible-intro2 {
+  animation: slide-in 2s forwards ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+.visible-intro3 {
+  animation: right-in 2s forwards ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+.visible-intro4 {
+  animation: right-in 2s forwards ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+.visible-intro5 {
+  animation: top-in 1s forwards ease;
+  opacity: 1;
+  transform: translateY(0);
+}
