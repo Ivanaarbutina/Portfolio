@@ -85,19 +85,21 @@
   height: 5rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
 
   & img {
-    width: 3rem;
-    margin: 2rem;
+    width: 2.3rem;
+    @media (min-width: $media-md) {
+      width: 3rem;
+    }
   }
-
   &__link {
     color: white;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
     transition: all 250ms ease-in-out;
     text-transform: uppercase;
-    margin: 0.4rem auto;
 
     @media (min-width: $media-md) {
       font-size: 1.2rem;
