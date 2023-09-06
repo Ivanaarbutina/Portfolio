@@ -18,7 +18,7 @@ const About = () => {
 
         for (let index = 0; index < listElements.length; index++) {
           const listElement = listElements[index];
-          // Odgodite dodavanje klase za svaki element
+
           await new Promise<void>((resolve) => {
             setTimeout(() => {
               listElement.classList.add("visible-intro4");

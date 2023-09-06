@@ -3,17 +3,13 @@ import Waves from "./waves";
 import Code from "./../assets/code_5568944.png";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import LanguageSwitcher from "./language-switcher";
+import { ReactNode } from "react";
 
 type LinkType = {
   label: string;
   path: string;
 };
 const headerLinks: LinkType[] = [
-  {
-    path: "/",
-    label: "home",
-  },
   {
     path: "#skills",
     label: "about",
@@ -27,7 +23,11 @@ const headerLinks: LinkType[] = [
     label: "contact",
   },
 ];
-const Header = () => {
+
+type HeaderType = {
+  children: ReactNode;
+};
+const Header = ({ children }: HeaderType) => {
   const [showHeaderSection, setShowHeaderSection] = useState(false);
 
   // Smooth scrolling navigation
@@ -71,7 +71,7 @@ const Header = () => {
       <div className="inner-header ">
         <div>
           <Link
-            to="#contact"
+            to="#footer"
             className="header__box"
             onClick={(e) => {
               scrollToContact(e);
@@ -103,9 +103,10 @@ const Header = () => {
           </nav>
 
           <div className={`language ${showHeaderSection ? "set" : ""}`}>
-            <LanguageSwitcher />
+            {children}
           </div>
         </section>
+
         <div
           className={`hamburger ${showHeaderSection ? "active" : ""}`}
           onClick={toggleNavMenu}

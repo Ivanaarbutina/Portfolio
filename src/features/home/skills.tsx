@@ -21,7 +21,7 @@ const Skills = () => {
             setTimeout(() => {
               iconElement.classList.add("visible-intro5");
               resolve();
-            }, 90 * index);
+            }, 60 * index);
           });
         }
         setAnimationExecuted(true);
