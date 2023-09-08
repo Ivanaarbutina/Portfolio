@@ -14,22 +14,18 @@
   }
 
   &--green {
-    background-color: rgb(118, 197, 185);
+    background-color: var(--color-animated-2);
   }
   &--gray {
-    background-color: rgb(76, 83, 83);
-    color: #fff;
-    &:hover {
-      color: aquamarine;
-      background-color: rgb(62, 61, 61);
-    }
+    background-color: var(--color-gray-450);
+    color: var(--color-white-400);
   }
   &--blue {
-    background-color: #2d6087;
-    color: #fff;
+    background-color: var(--color-card-4);
+    color: var(--color-white-400);
     box-shadow: var(--blue-box-shadow);
     &:hover {
-      background-color: #073659;
+      background-color: var(--color-card-5);
       color: var(--color-animated-2);
     }
   }
@@ -42,36 +38,5 @@
   }
   &--lg {
     padding: 1.1rem 3rem;
-  }
-
-  &--floating {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 5rem;
-    height: 5rem;
-    border: none;
-    color: var(--color-white);
-    border-radius: var(--border-circle);
-    cursor: pointer;
-    transition: all 250ms ease-in-out;
-    box-shadow: 0 0.125rem 0.75rem 0 var(--color-gray-500);
-
-    @media (min-width: $media-sm) {
-      bottom: 4rem;
-      right: 4rem;
-    }
-
-    &:hover {
-      transform: scale(1.1);
-    }
-
-    svg {
-      display: block;
-      width: 2rem;
-    }
   }
 }

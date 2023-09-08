@@ -6,7 +6,7 @@
     #0d4671 95%
   );
   min-height: 6rem;
-  color: rgb(99, 105, 124);
+  color: var(--color-gray-450);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,7 +50,7 @@
     }
 
     &:hover {
-      color: rgb(151, 13, 98);
+      color: var(--color-carmine-2);
     }
   }
 

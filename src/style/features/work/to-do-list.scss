@@ -39,13 +39,13 @@
 
   &__input {
     padding: 0.6rem 1.8rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-animated-1);
     font-size: 1rem;
     border-radius: var(--border-rounded);
     max-width: 100%;
     margin-bottom: 1rem;
     flex: 1;
-    box-shadow: 0 0.125rem 0.75rem 0 var(--color-gray-400);
+    box-shadow: var(--light-box-shadow);
 
     @media (min-width: $media-sm) {
       font-size: 1.2rem;

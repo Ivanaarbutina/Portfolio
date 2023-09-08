@@ -10,7 +10,7 @@
 
   &__input {
     padding: 0.7rem 1.8rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-animated-1);
     font-size: 1rem;
     border-radius: var(--border-rounded);
     margin-bottom: 0.5rem;
@@ -42,13 +42,8 @@
     border-collapse: collapse;
     width: 100%;
     max-width: 20rem;
-    margin: 0 auto;
-
     @media (min-width: 576px) {
-      border-collapse: collapse;
-      width: 100%;
       max-width: 90rem;
-      margin: 0 auto;
     }
 
     &__wrapper {
@@ -56,14 +51,14 @@
     }
 
     & thead {
-      background-color: #f1f1f1;
+      background-color: var(--color-animated-1);
     }
 
     th,
     td {
       text-align: center;
       padding: 1rem 1rem;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid var(--color-animated-1);
       color: var(--color-animated-3);
       @media (min-width: 576px) {
         padding: 0.2rem;
@@ -71,11 +66,11 @@
     }
 
     tr:nth-child(even) {
-      background-color: #f1f1f1;
+      background-color: var(--color-table-1);
     }
 
     tr:hover {
-      background-color: #ddd;
+      background-color: var(--color-table-2);
     }
 
     th {

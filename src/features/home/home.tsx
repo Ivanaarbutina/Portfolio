@@ -11,6 +11,7 @@ import { useTranslation } from "react-i18next";
 
 const Home = () => {
   const { i18n } = useTranslation();
+
   const [selectedLanguage, setSelectedLanguage] = useState(
     localStorage.getItem("selectedLanguage") || "en"
   );
@@ -62,9 +63,6 @@ const Home = () => {
         <Contact />
       </div>
       <div>
-        {/* <div className="home__language">
-          <LanguageSwitcher />
-        </div> */}
         <div id="footer">
           <Footer />
         </div>

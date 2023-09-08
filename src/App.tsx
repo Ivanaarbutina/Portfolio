@@ -7,12 +7,11 @@ import ToDo from "./features/work/to-do-list";
 import Contact from "./features/home/contact";
 import About from "./features/about/about";
 import Europe from "./features/work/europe";
-
 import WorkList from "./features/work/work-list";
 
 function App() {
   return (
-    <>
+    <div>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -24,7 +23,7 @@ function App() {
           <Route path="/europe" element={<Europe />} />
         </Route>
       </Routes>
-    </>
+    </div>
   );
 }
 
