@@ -12,6 +12,7 @@
     flex-direction: column;
     padding: 0 1rem;
     text-align: center;
+
     @media (min-width: $media-sm) {
       margin: 0 2rem;
     }
@@ -66,9 +67,14 @@
     }
     & img {
       width: 4rem;
+
       @media (min-width: $media-lg) {
-        width: 8.5rem;
+        width: 9.4rem;
       }
+    }
+
+    &__info {
+      margin-top: 0.5rem;
     }
   }
 
@@ -84,6 +90,10 @@
       @media (min-width: $media-lg) {
         width: 7rem;
       }
+    }
+
+    &__info {
+      margin-top: 1rem;
     }
   }
 }

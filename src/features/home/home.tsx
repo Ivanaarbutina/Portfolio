@@ -26,10 +26,10 @@ const Home = () => {
 
   const changeLanguage = (lang: string) => {
     // Sačuvaj izabrani jezik u localStorage
+    window.location.reload();
     localStorage.setItem("selectedLanguage", lang);
     setSelectedLanguage(lang);
     i18n.changeLanguage(lang);
-    window.location.reload();
   };
   return (
     <div className="home">

@@ -51,13 +51,15 @@ const Contact = () => {
           <div className="contact__mail">
             <Link to="mailto:ivana.arbutina2@gmail.com">
               <img src={mail} alt="Mail icon" />
-              {t("contact-mail")}
+              <span className="contact__mail__info">{t("contact-mail")}</span>
             </Link>
           </div>
           <div className="contact__location">
             <Link to="https://goo.gl/maps/CoDEeQaqBuapGg2F7" target="_blank">
               <img src={location} alt="Location icon" />
-              Beli Manastir, {t("contact-location")}
+              <span className="contact__location__info">
+                Beli Manastir, {t("contact-location")}
+              </span>
             </Link>
           </div>
         </div>

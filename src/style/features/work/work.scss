@@ -130,6 +130,8 @@
       width: 1.8rem;
       display: inline-block;
       margin-right: 0.5rem;
+      &:hover {
+      }
     }
     @media (min-width: $media-sm) {
       font-size: 1.1rem;
