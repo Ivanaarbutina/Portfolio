@@ -29,7 +29,6 @@ const Projects = () => {
         projectImg.classList.add("visible-intro3");
       }
 
-      // Postavite stanje da označite da je animacija izvršena
       setAnimationExecuted(true);
     }
   }, [inView, animationExecuted]);

@@ -10,7 +10,7 @@ const About = () => {
   const [animationExecuted, setAnimationExecuted] = useState(false);
   const { t } = useTranslation();
 
-  const { inView, ref } = useInView({ threshold: 0.5 });
+  const { inView, ref } = useInView({ threshold: 0.01 });
   useEffect(() => {
     const animateElements = async () => {
       if (inView && !animationExecuted) {

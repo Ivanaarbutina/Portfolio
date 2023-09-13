@@ -12,7 +12,7 @@ const Intro = () => {
   const { t } = useTranslation();
 
   const { inView, ref } = useInView({
-    threshold: 0.5,
+    threshold: 0.01,
   });
   useEffect(() => {
     if (inView && !animationExecuted) {
