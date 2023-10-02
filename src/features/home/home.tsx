@@ -11,6 +11,7 @@ import { useTranslation } from "react-i18next";
 const Home = () => {
   const { i18n } = useTranslation();
 
+  const [shouldRefresh, setShouldRefresh] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState(
     localStorage.getItem("selectedLanguage") || "en"
   );
@@ -23,14 +24,17 @@ const Home = () => {
   }, [i18n]);
 
   const changeLanguage = (lang: string) => {
-    setTimeout(() => {
-      localStorage.setItem("selectedLanguage", lang);
-      setSelectedLanguage(lang);
-      i18n.changeLanguage(lang);
-    }, 1000);
+    localStorage.setItem("selectedLanguage", lang);
+    setSelectedLanguage(lang);
+    setShouldRefresh(true);
     window.location.reload();
   };
-
+  useEffect(() => {
+    if (shouldRefresh) {
+      // Ovde možete dodati logiku za osvežavanje stranice
+      window.location.reload();
+    }
+  }, [shouldRefresh]);
   return (
     <div className="home">
       <Header>
