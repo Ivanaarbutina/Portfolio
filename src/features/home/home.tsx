@@ -1,6 +1,5 @@
 import Footer from "../../components/footer";
 import Header from "../../components/header";
-
 import About from "../about/about";
 import Contact from "./contact";
 import Intro from "./intro";
@@ -17,7 +16,6 @@ const Home = () => {
   );
 
   useEffect(() => {
-    // Postavite jezik iz localStorage kada se komponenta montira
     const storedLanguage = localStorage.getItem("selectedLanguage");
     if (storedLanguage) {
       i18n.changeLanguage(storedLanguage);
@@ -25,12 +23,14 @@ const Home = () => {
   }, [i18n]);
 
   const changeLanguage = (lang: string) => {
-    // Sačuvaj izabrani jezik u localStorage
+    setTimeout(() => {
+      localStorage.setItem("selectedLanguage", lang);
+      setSelectedLanguage(lang);
+      i18n.changeLanguage(lang);
+    }, 1000);
     window.location.reload();
-    localStorage.setItem("selectedLanguage", lang);
-    setSelectedLanguage(lang);
-    i18n.changeLanguage(lang);
   };
+
   return (
     <div className="home">
       <Header>
