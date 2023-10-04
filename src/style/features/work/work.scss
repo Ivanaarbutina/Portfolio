@@ -4,16 +4,19 @@
   background-color: var(--color-card-1);
   border-radius: var(--border-rounded);
   color: var(--color-white-400);
-  margin: 0.5rem;
+  max-width: 20rem;
   padding: 0.6rem;
   transition: all 250ms ease-in-out;
-  max-width: 30rem;
   box-shadow: var(--custom-box-shadow);
   font-family: "Nunito", sans-serif;
 
-  @media (min-width: $media-sm) {
-    margin: 1rem;
-    padding: 1.5rem;
+  @media (min-width: $media-md) {
+    height: 43rem;
+  }
+  @media (min-width: $media-lg) {
+    height: 47.3rem;
+    padding: 1rem;
+    max-width: 25rem;
   }
 
   &:hover {
@@ -21,16 +24,12 @@
     box-shadow: var(--hover-box-shadow);
   }
   &__wrapper {
-    display: grid;
-    grid-gap: 2rem;
-    justify-items: center;
-    grid-template-columns: repeat(1, 1fr);
-
-    @media (min-width: $media-lg) {
-      grid-template-columns: repeat(2, 1fr);
-    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
   }
-
   &__img {
     width: 100%;
     border-radius: var(--border-rounded);
@@ -51,7 +50,7 @@
     @media (min-width: $media-xs) {
       font-size: 0.9rem;
     }
-    @media (min-width: $media-md) {
+    @media (min-width: $media-lg) {
       font-size: 1rem;
     }
   }
@@ -61,7 +60,7 @@
     font-weight: 600;
     text-align: center;
     color: var(--color-animated-3);
-    @media (min-width: $media-sm) {
+    @media (min-width: $media-lg) {
       font-size: 1.8rem;
     }
   }
@@ -96,10 +95,7 @@
     &:hover {
       color: var(--color-white-400);
     }
-    & svg {
-      fill: var(--color-animated-3);
-    }
-    @media (min-width: $media-sm) {
+    @media (min-width: $media-lg) {
       font-size: 1.1rem;
     }
   }
@@ -126,13 +122,10 @@
     &:hover {
       color: var(--color-white-400);
     }
-
-    & img {
-      width: 1.8rem;
-      display: inline-block;
-      margin-right: 0.5rem;
+    & svg {
+      margin-top: 0.2rem;
     }
-    @media (min-width: $media-sm) {
+    @media (min-width: $media-lg) {
       font-size: 1.1rem;
     }
   }

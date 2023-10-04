@@ -1,7 +1,7 @@
 import { works } from "./data/work-data";
 import GitHub from "../../assets/icons/github";
+import Look from "../../assets/icons/look";
 import { useTranslation } from "react-i18next";
-import viewIcon from "./../../assets/icons/icons8-view-64.png";
 const WorkList = () => {
   const { t } = useTranslation();
 
@@ -24,7 +24,7 @@ const WorkList = () => {
               </div>
               <div className="work__link">
                 <a href={path} target="_blank" className="work__link__project">
-                  <img src={viewIcon} />
+                  <Look />
                   {t("project-showcase")}
                 </a>
                 <a href={gitHub} target="_blank" className="work__github">

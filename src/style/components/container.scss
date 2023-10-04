@@ -25,9 +25,12 @@
   }
 
   &--lg {
-    max-width: $media-xl;
+    max-width: $media-lg;
   }
   &--xl {
-    max-width: 100%;
+    max-width: $media-xl;
+  }
+  &--xxl {
+    max-width: $media-xxl;
   }
 }

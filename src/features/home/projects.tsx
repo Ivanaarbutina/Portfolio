@@ -34,7 +34,7 @@ const Projects = () => {
   }, [inView, animationExecuted]);
 
   return (
-    <Container size="lg">
+    <Container size="xxl">
       <div className="home__projects__wrapper">
         <header className="home__projects">
           <h3

@@ -2,6 +2,7 @@ import searchApp from "./../../../assets/search-app.png";
 import chatApp from "./../../../assets/chat1.png";
 import toDo from "./../../../assets/planer1.png";
 import europe from "./../../../assets/europe-pic.png";
+import worldOP from "./../../../assets/world-of-parfumes.png";
 import react from "./../../../assets/react.svg";
 import typeSc from "./../../../assets/typescript_5968381.png";
 import sass from "./../../../assets/sass_919831.png";
@@ -17,6 +18,16 @@ type WorkType = {
 };
 
 export const works: WorkType[] = [
+  {
+    path: "https://world-of-parfumes.netlify.app/",
+    descriptKey: "project-5-desc",
+    gitHub: "https://github.com/Ivanaarbutina/World-of-Parfumes",
+    img: worldOP,
+    nameKey: "project-5",
+    reactIcon: react,
+    typeScIcon: typeSc,
+    sassIcon: sass,
+  },
   {
     path: "/search-app",
     descriptKey: "project-1-desc",
