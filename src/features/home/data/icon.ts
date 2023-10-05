@@ -4,7 +4,7 @@ import Sass from "./../../../assets/sass_919831.png";
 import JavaSc from "./../../../assets/js_5968292.png";
 import TypeSc from "./../../../assets/typescript_5968381.png";
 import React from "./../../../assets/react.svg";
-import GitIcon from "./../../../assets/github_4926624.png";
+import Git from "./../../../assets/icons/icons8-git-logo.svg";
 
 export type IconType = {
   img: string;
@@ -18,5 +18,5 @@ export const iconsList: IconType[] = [
   { img: TypeSc, name: "TypeScript" },
   { img: React, name: "React" },
   { img: Sass, name: "SASS" },
-  { img: GitIcon, name: "GitHub" },
+  { img: Git, name: "Git" },
 ];

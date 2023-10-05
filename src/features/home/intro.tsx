@@ -43,6 +43,7 @@ const Intro = () => {
               animationExecuted ? "visible-intro" : ""
             }`}
             ref={ref}
+            aria-hidden="true"
           >
             {t("intro")} <br></br>
             <span className="home__description__name">
@@ -64,10 +65,20 @@ const Intro = () => {
             to="https://www.linkedin.com/in/ivana-arbutina-340660285/"
             target="_blank"
           >
-            <img className="home__icon" src={LnIcon} alt="Linkedin icon" />
+            <img
+              className="home__icon"
+              src={LnIcon}
+              alt="Linkedin icon"
+              aria-label="LinkedIn profil of Ivana Arbutina"
+            />
           </Link>
           <Link to="https://github.com/Ivanaarbutina" target="_blank">
-            <img className="home__icon" src={GitIcon} alt="GitHub icon" />
+            <img
+              className="home__icon"
+              src={GitIcon}
+              alt="GitHub icon"
+              aria-label="GitHub profil of Ivana Arbutina"
+            />
           </Link>
         </div>
         <img
@@ -76,7 +87,7 @@ const Intro = () => {
           }`}
           ref={ref}
           src={profilImg}
-          alt="Profile image"
+          alt="Ivana Arbutina - Profile image"
         />
       </div>
     </Container>
